@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name form</title>
+</head>
+<body>
+    <!--
+    context
+    error_message
+    -->
+     {% if error_message %}
+        <p>{{error_message}}</p>
+    {% endif %}
+    <form action="{% url 'simple_form:name_form' %}" method="post">
+        {% csrf_token %}
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="your_name"> <br>
+        <input type="submit" value="OK">
+    </form>
+</body>
+</html>
+
