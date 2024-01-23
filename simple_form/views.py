@@ -22,7 +22,7 @@ def class_name_form(request):
     if request.method == "POST":
         form = NameForm(request.POST)
         if form.is_valid():
-            redirect_address = shortcuts.reverse("simple_form:form_result")
+            redirect_address = shortcuts.reverse("simple_form:name_form")
             return HttpResponseRedirect(redirect_address)
     form = NameForm()
     return shortcuts.render(request, "simple_form/class_form.html", {"form": form})
