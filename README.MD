@@ -4,7 +4,7 @@ Create simple form based on templates and django class forms.
 ### Initialization and launch
 
 Project has not any database. Neither custom nor standard db. 
-Therefor you do not have to create and migrate them.
+Therefore you do not have to create and migrate them.
 
 #### test 
 
