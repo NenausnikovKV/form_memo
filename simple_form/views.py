@@ -42,7 +42,7 @@ def model_name_form(request):
         return shortcuts.render(request, template_name="simple_form/model_form.html", context={"form": model_form})
     model_form = PersonForm(request.POST)
     if model_form.is_valid():
-        # model may be change or create by form
+        # model may be change or create by form, but this project does not use data base
         # model_form.save()
         name = model_form.cleaned_data["your_name"]
         redirect_address = shortcuts.reverse("simple_form:form_result", args=(name, ))
